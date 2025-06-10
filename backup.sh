@@ -51,6 +51,10 @@ else
   AWS_ARGS="--endpoint-url ${S3_ENDPOINT}"
 fi
 
+if [ "${S3_CHECKSUM_ALGORITHM}" != "**None**" ]; then
+  AWS_ARGS="${AWS_ARGS} --checksum-algorithm ${S3_CHECKSUM_ALGORITHM}"
+fi
+
 export AWS_ACCESS_KEY_ID=$S3_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY
 export AWS_DEFAULT_REGION=$S3_REGION
