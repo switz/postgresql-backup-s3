@@ -150,3 +150,5 @@ $ docker run ... -e PARALLEL_JOBS=4 -e BACKUP_FILE=backup/dbname_0000-00-00T00:0
 ```
 
 Note: Custom format is not available when using `POSTGRES_DATABASE=all` as pg_dumpall does not support this format.
+
+.
